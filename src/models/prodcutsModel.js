@@ -4,6 +4,7 @@ const findAll = async () => {
   const [result] = await connection.execute(
     'SELECT * FROM products',
   );
+  
   return result; 
 };
 
@@ -12,10 +13,21 @@ const findById = async (productId) => {
     'SELECT * FROM products WHERE id = ?',
     [productId],
   );
+
   return result; 
+};
+
+const insert = async (productName) => {
+  const [{ insertId }] = await connection.execute(
+    'INSERT INTO products (name) VALUES (?)',
+    [productName],
+  );
+
+  return insertId;
 };
 
 module.exports = {
   findAll,
   findById,
+  insert,
 };

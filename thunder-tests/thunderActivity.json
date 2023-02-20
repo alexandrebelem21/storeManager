@@ -19,17 +19,12 @@
     "containerId": "",
     "name": "http://localhost:3000/products",
     "url": "http://localhost:3000/products/1",
-    "method": "PUT",
+    "method": "DELETE",
     "sortNum": 0,
     "created": "2023-02-19T04:42:28.663Z",
-    "modified": "2023-02-20T04:50:14.437Z",
+    "modified": "2023-02-20T05:18:02.278Z",
     "headers": [],
     "params": [],
-    "body": {
-      "type": "json",
-      "raw": "{\n  \"name\": \"Martelo do Batman aaa\"\n}",
-      "form": []
-    },
     "tests": []
   }
 ]

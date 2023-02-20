@@ -18,16 +18,16 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:3000/products",
-    "url": "http://localhost:3000/sales/2",
-    "method": "GET",
+    "url": "http://localhost:3000/products/1",
+    "method": "PUT",
     "sortNum": 0,
     "created": "2023-02-19T04:42:28.663Z",
-    "modified": "2023-02-20T04:14:08.584Z",
+    "modified": "2023-02-20T04:50:14.437Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "[\n  {\n    \"productId\": 3,\n    \"quantity\": 2\n  },\n  {\n    \"productId\": 1,\n    \"quantity\": 5\n  }\n]",
+      "raw": "{\n  \"name\": \"Martelo do Batman aaa\"\n}",
       "form": []
     },
     "tests": []

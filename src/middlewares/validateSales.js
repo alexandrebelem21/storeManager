@@ -27,6 +27,7 @@ const validateQuantity = (req, res, next) => {
 
 const validateReq = async (req, res, next) => {
   const sales = req.body;
+
   const newSales = await Promise
     .all(sales
     .map(async (product) => productsModel
@@ -39,8 +40,20 @@ const validateReq = async (req, res, next) => {
   return next();
 };
 
+// const validateListSale = async (req, res, next) => {
+//   const sales = req.body;
+//   console.log(sales);
+//   const hasSale = sales.every((product) => product);
+//   // Vai verificar se todas vendas tem o campo productId
+
+//   if (!hasSale) return res.status(404).json({ message: 'Sale not found' });
+
+//   return next();
+// };
+
 module.exports = {
   validateProductId,
   validateQuantity,
   validateReq,
+  // validateListSale,
 };

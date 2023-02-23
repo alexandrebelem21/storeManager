@@ -39,8 +39,6 @@ const deleteProduct = async (id) => {
     'DELETE FROM products WHERE id = ?',
     [id],
   );
-  console.log('cntrt');
-  console.log(id);
   return { id };
 };
 

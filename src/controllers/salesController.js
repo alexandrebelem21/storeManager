@@ -25,8 +25,20 @@ const getSale = async (req, res) => {
   res.status(200).json(message);
 };
 
+const deleteSale = async (req, res) => {
+  // const { name } = req.body;
+  const { id } = req.params;
+
+  const { type, message } = await salesService.deleteSale(id);
+
+  if (type) return res.status(errorMap.mapError(type)).json({ message });
+
+  res.status(204).json(message);
+};
+
 module.exports = {
   registerSales,
   listSales,
   getSale,
+  deleteSale,
 };

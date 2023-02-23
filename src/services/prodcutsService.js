@@ -32,7 +32,6 @@ const deleteProduct = async (id) => {
    const findProduct = await productsModel.findById(id);
   if (!findProduct) return { type: 'PRODUCT_NOT_FOUND', message: 'Product not found' };
   // if (findProduct.type !== null) return { type: 'PRODUCT_NOT_FOUND', message: 'Product not found' };
-console.log('servc');
   await productsModel.deleteProduct(id);
   return { type: null, message: '' };
 };
